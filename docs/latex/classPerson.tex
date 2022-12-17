@@ -1,0 +1,389 @@
+\hypertarget{classPerson}{}\doxysection{Person Class Reference}
+\label{classPerson}\index{Person@{Person}}
+
+
+Represents a person in the simulation. Inherits from \mbox{\hyperlink{classIEntity}{I\+Entity}}. People move by walking or waiting for a car.  
+
+
+
+
+{\ttfamily \#include $<$Person.\+h$>$}
+
+
+
+Inheritance diagram for Person\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{classPerson__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Person\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{classPerson__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPerson_a3127d731beefe448c4c5d5b8c0392f9a}{Person}} (Json\+Object \&obj)
+\begin{DoxyCompactList}\small\item\em Persons are created with a name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPerson_af04da9ee5e9d4f3498e372fc96e873fd}\label{classPerson_af04da9ee5e9d4f3498e372fc96e873fd}} 
+\mbox{\hyperlink{classPerson_af04da9ee5e9d4f3498e372fc96e873fd}{$\sim$\+Person}} () override=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classPerson_a50fb2aa8a1c9a2f84ff3fa2dcdd9df03}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Returns the position of the \mbox{\hyperlink{classPerson}{Person}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classPerson_acd094df741b535df23ee36e4d9429570}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{classPerson}{Person}}\textquotesingle{}s direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classPerson_a133a03c9c192cc0c6ba50e1e5549b8be}{Get\+Destination}} () const
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{classPerson}{Person}}\textquotesingle{}s direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPerson_a83768a81d7d5ab627fc7eb2345211ebb}{Get\+Availability}} () const
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{classPerson}{Person}}\textquotesingle{}s availability. \end{DoxyCompactList}\item 
+Json\+Object \mbox{\hyperlink{classPerson_a21f7efe67dea0a2371cfaa394669366f}{Get\+Details}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{classPerson}{Person}}\textquotesingle{}s details. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classPerson_a1acba55463ff34f7adb282bf9fb652f5}{Get\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Returns the speed of the \mbox{\hyperlink{classPerson}{Person}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPerson_a6def446b04265818ab4aa66fa289dcf2}{Get\+Strategy\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Returns the name of the strategy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPerson_acf153eacb0fa20d6318b576c8cf779fb}{Set\+Availability}} (bool choice)
+\begin{DoxyCompactList}\small\item\em Set the availablity of the \mbox{\hyperlink{classPerson}{Person}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPerson_a016dad0684cbfa44525a2dcdf5dfe8c3}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set position of the \mbox{\hyperlink{classPerson}{Person}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPerson_a6be07087fea51db2f7b48c06e7a8b43c}{Set\+Direction}} (\mbox{\hyperlink{classVector3}{Vector3}} dir\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set direction of the \mbox{\hyperlink{classPerson}{Person}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPerson_ac9d81f2bae64d9cad13b82c2b4a21704}{Set\+Destination}} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set destination of the \mbox{\hyperlink{classPerson}{Person}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPerson_a029f9ce24ddfb36e595da228692d1182}{Set\+Strategy\+Name}} (std\+::string strategy\+Name\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the strategy name of the \mbox{\hyperlink{classPerson}{Person}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPerson_a214806f023f72bf785fda9084164d117}{Rotate}} (double angle)
+\begin{DoxyCompactList}\small\item\em Rotate the \mbox{\hyperlink{classPerson}{Person}} by a given angle. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPerson_a03e6ee004c2cef46cf5ff024d39fa8cb}{Ready\+For\+Pickup}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if person is ready for pickup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPerson_abccfe769b40226e77458337b9feddbb2}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Updates the position of the \mbox{\hyperlink{classPerson}{Person}}. Moves to nearest \mbox{\hyperlink{classAtm}{Atm}}, or if already at \mbox{\hyperlink{classAtm}{Atm}} does nothing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPerson_a31585c2ec6f82314d0169b0d3836a88a}\label{classPerson_a31585c2ec6f82314d0169b0d3836a88a}} 
+void \mbox{\hyperlink{classPerson_a31585c2ec6f82314d0169b0d3836a88a}{Get\+Nearest\+Atm}} ()
+\begin{DoxyCompactList}\small\item\em Sets Atm.\+nearest\+Atm to the nearest atm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPerson_aae0027e2dd11cb90b3fedb12f7de703d}{Set\+Atms}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ atms)
+\begin{DoxyCompactList}\small\item\em Sets a Person.\+atms to the given set of atms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a person in the simulation. Inherits from \mbox{\hyperlink{classIEntity}{I\+Entity}}. People move by walking or waiting for a car. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPerson_a3127d731beefe448c4c5d5b8c0392f9a}\label{classPerson_a3127d731beefe448c4c5d5b8c0392f9a}} 
+\index{Person@{Person}!Person@{Person}}
+\index{Person@{Person}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{Person()}{Person()}}
+{\footnotesize\ttfamily Person\+::\+Person (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Persons are created with a name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Json\+Object\& that the \mbox{\hyperlink{classPerson}{Person}} is built with \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPerson_a83768a81d7d5ab627fc7eb2345211ebb}\label{classPerson_a83768a81d7d5ab627fc7eb2345211ebb}} 
+\index{Person@{Person}!GetAvailability@{GetAvailability}}
+\index{GetAvailability@{GetAvailability}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{GetAvailability()}{GetAvailability()}}
+{\footnotesize\ttfamily bool Person\+::\+Get\+Availability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the \mbox{\hyperlink{classPerson}{Person}}\textquotesingle{}s availability. 
+
+\begin{DoxyReturn}{Returns}
+bool representing the \mbox{\hyperlink{classPerson}{Person}}\textquotesingle{}s availability 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_ab98734fed42933c72b3ff996b146a558}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPerson_a133a03c9c192cc0c6ba50e1e5549b8be}\label{classPerson_a133a03c9c192cc0c6ba50e1e5549b8be}} 
+\index{Person@{Person}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Person\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the \mbox{\hyperlink{classPerson}{Person}}\textquotesingle{}s direction. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVector3}{Vector3}} representing the \mbox{\hyperlink{classPerson}{Person}}\textquotesingle{}s destination 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPerson_a21f7efe67dea0a2371cfaa394669366f}\label{classPerson_a21f7efe67dea0a2371cfaa394669366f}} 
+\index{Person@{Person}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily Json\+Object Person\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the \mbox{\hyperlink{classPerson}{Person}}\textquotesingle{}s details. 
+
+\begin{DoxyReturn}{Returns}
+Json\+Object representing the \mbox{\hyperlink{classPerson}{Person}}\textquotesingle{}s details 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPerson_acd094df741b535df23ee36e4d9429570}\label{classPerson_acd094df741b535df23ee36e4d9429570}} 
+\index{Person@{Person}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Person\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the \mbox{\hyperlink{classPerson}{Person}}\textquotesingle{}s direction. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVector3}{Vector3}} representing the \mbox{\hyperlink{classPerson}{Person}}\textquotesingle{}s direction 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPerson_a50fb2aa8a1c9a2f84ff3fa2dcdd9df03}\label{classPerson_a50fb2aa8a1c9a2f84ff3fa2dcdd9df03}} 
+\index{Person@{Person}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Person\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the position of the \mbox{\hyperlink{classPerson}{Person}}. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVector3}{Vector3}} representing the \mbox{\hyperlink{classPerson}{Person}}\textquotesingle{}s position 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPerson_a1acba55463ff34f7adb282bf9fb652f5}\label{classPerson_a1acba55463ff34f7adb282bf9fb652f5}} 
+\index{Person@{Person}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Person\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the speed of the \mbox{\hyperlink{classPerson}{Person}}. 
+
+\begin{DoxyReturn}{Returns}
+float representing the speed of the \mbox{\hyperlink{classPerson}{Person}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPerson_a6def446b04265818ab4aa66fa289dcf2}\label{classPerson_a6def446b04265818ab4aa66fa289dcf2}} 
+\index{Person@{Person}!GetStrategyName@{GetStrategyName}}
+\index{GetStrategyName@{GetStrategyName}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{GetStrategyName()}{GetStrategyName()}}
+{\footnotesize\ttfamily std\+::string Person\+::\+Get\+Strategy\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the name of the strategy. 
+
+\begin{DoxyReturn}{Returns}
+Name of the strategy 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a9b4a238a04f5cd56db89e50292355005}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPerson_a03e6ee004c2cef46cf5ff024d39fa8cb}\label{classPerson_a03e6ee004c2cef46cf5ff024d39fa8cb}} 
+\index{Person@{Person}!ReadyForPickup@{ReadyForPickup}}
+\index{ReadyForPickup@{ReadyForPickup}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{ReadyForPickup()}{ReadyForPickup()}}
+{\footnotesize\ttfamily bool Person\+::\+Ready\+For\+Pickup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns true if person is ready for pickup. 
+
+\begin{DoxyReturn}{Returns}
+Ready for pickup (true) or not (false) 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_ab9f4f19c76493491ac332445a96927d2}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPerson_a214806f023f72bf785fda9084164d117}\label{classPerson_a214806f023f72bf785fda9084164d117}} 
+\index{Person@{Person}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Person\+::\+Rotate (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotate the \mbox{\hyperlink{classPerson}{Person}} by a given angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & double angle by which to rotate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPerson_aae0027e2dd11cb90b3fedb12f7de703d}\label{classPerson_aae0027e2dd11cb90b3fedb12f7de703d}} 
+\index{Person@{Person}!SetAtms@{SetAtms}}
+\index{SetAtms@{SetAtms}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{SetAtms()}{SetAtms()}}
+{\footnotesize\ttfamily void Person\+::\+Set\+Atms (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{atms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets a Person.\+atms to the given set of atms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em atms} & Vector of atm objects \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a0da66ebf9e58a27cff0055f11b815ac3}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPerson_acf153eacb0fa20d6318b576c8cf779fb}\label{classPerson_acf153eacb0fa20d6318b576c8cf779fb}} 
+\index{Person@{Person}!SetAvailability@{SetAvailability}}
+\index{SetAvailability@{SetAvailability}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{SetAvailability()}{SetAvailability()}}
+{\footnotesize\ttfamily void Person\+::\+Set\+Availability (\begin{DoxyParamCaption}\item[{bool}]{choice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the availablity of the \mbox{\hyperlink{classPerson}{Person}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice} & availablility -\/ true or false \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_adf3acdf4764f5ff25f89d7814e39551c}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPerson_ac9d81f2bae64d9cad13b82c2b4a21704}\label{classPerson_ac9d81f2bae64d9cad13b82c2b4a21704}} 
+\index{Person@{Person}!SetDestination@{SetDestination}}
+\index{SetDestination@{SetDestination}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{SetDestination()}{SetDestination()}}
+{\footnotesize\ttfamily void Person\+::\+Set\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{des\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set destination of the \mbox{\hyperlink{classPerson}{Person}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+} & \mbox{\hyperlink{classVector3}{Vector3}} representing new destination \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPerson_a6be07087fea51db2f7b48c06e7a8b43c}\label{classPerson_a6be07087fea51db2f7b48c06e7a8b43c}} 
+\index{Person@{Person}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily void Person\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{dir\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set direction of the \mbox{\hyperlink{classPerson}{Person}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+} & \mbox{\hyperlink{classVector3}{Vector3}} representing new direction \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPerson_a016dad0684cbfa44525a2dcdf5dfe8c3}\label{classPerson_a016dad0684cbfa44525a2dcdf5dfe8c3}} 
+\index{Person@{Person}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Person\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set position of the \mbox{\hyperlink{classPerson}{Person}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+} & \mbox{\hyperlink{classVector3}{Vector3}} representing new position \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPerson_a029f9ce24ddfb36e595da228692d1182}\label{classPerson_a029f9ce24ddfb36e595da228692d1182}} 
+\index{Person@{Person}!SetStrategyName@{SetStrategyName}}
+\index{SetStrategyName@{SetStrategyName}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{SetStrategyName()}{SetStrategyName()}}
+{\footnotesize\ttfamily void Person\+::\+Set\+Strategy\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{strategy\+Name\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the strategy name of the \mbox{\hyperlink{classPerson}{Person}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strategy\+Name\+\_\+} & Name of new strategy \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a933def05f85783fddbf05e8257cc8880}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPerson_abccfe769b40226e77458337b9feddbb2}\label{classPerson_abccfe769b40226e77458337b9feddbb2}} 
+\index{Person@{Person}!Update@{Update}}
+\index{Update@{Update}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Person\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the position of the \mbox{\hyperlink{classPerson}{Person}}. Moves to nearest \mbox{\hyperlink{classAtm}{Atm}}, or if already at \mbox{\hyperlink{classAtm}{Atm}} does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+{\em scheduler} & Schedule of entities \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}{I\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/louku008/csci-\/3081w/\+Team-\/001-\/47-\/homework04/libs/transit/include/Person.\+h\item 
+/home/louku008/csci-\/3081w/\+Team-\/001-\/47-\/homework04/libs/transit/src/Person.\+cc\end{DoxyCompactItemize}

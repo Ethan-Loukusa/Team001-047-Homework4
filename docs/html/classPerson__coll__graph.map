@@ -1,0 +1,4 @@
+<map id="Person" name="Person">
+<area shape="rect" id="node1" title="Represents a person in the simulation. Inherits from IEntity. People move by walking or waiting for a..." alt="" coords="5,80,72,107"/>
+<area shape="rect" id="node2" href="$classIEntity.html" title="Abstract class for an entity within the simulation. Moving objects within the simulation inherit from..." alt="" coords="7,5,71,32"/>
+</map>

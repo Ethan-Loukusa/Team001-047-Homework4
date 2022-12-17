@@ -1,0 +1,67 @@
+At the end of this project, you will be able to simulate the behavior of the drone and robots. You will be able to set the pickup location and the final destination of the robot, and afterward the drone will come and pick up the robot toward their destination. Not only the transportation simulation but you will be able to decide what to do with the robot\textquotesingle{}s behavior when the passenger arrived at ther destination or if the drone is too late to pickup.
+
+This directory contains the support code needed to visualize the drone simulation system.\hypertarget{md__home_louku008_csci-3081w_Team-001-47-homework04_README_Project_autotoc_md17}{}\doxysubsubsection{What is in this directory?}\label{md__home_louku008_csci-3081w_Team-001-47-homework04_README_Project_autotoc_md17}
+
+\begin{DoxyItemize}
+\item {\ttfamily R\+E\+A\+D\+M\+E.\+md} 
+\item {\ttfamily .gitignore} 
+\item {\ttfamily app} folder, which contains\+: 
+\begin{DoxyItemize}
+\item {\ttfamily graph\+\_\+viewer} \+: producing graph visualization 
+\item {\ttfamily transit\+\_\+service} \+: visualization 
+\end{DoxyItemize}
+\item {\ttfamily libs} folder, which contains\+: 
+\begin{DoxyItemize}
+\item {\ttfamily routing} \+: finding the paths 
+\item {\ttfamily trainsit} \+: entities properties 
+\end{DoxyItemize}
+\item {\ttfamily dependencies} 
+\end{DoxyItemize}\hypertarget{md__home_louku008_csci-3081w_Team-001-47-homework04_README_Project_autotoc_md18}{}\doxysection{Getting Started}\label{md__home_louku008_csci-3081w_Team-001-47-homework04_README_Project_autotoc_md18}
+Here is a quick overview of how to run the visualization (If you are using ssh, navigate to ssh category below)\+: \begin{DoxyVerb}```bash
+# Go to the project directory
+cd /path/to/repo/project
+
+# Build the project
+make -j
+
+# Run the project (./build/web-app <port> <web folder>)
+./build/bin/transit_service 8081 apps/transit_service/web/
+```
+\end{DoxyVerb}
+
+
+Navigate to \href{http://127.0.0.1:8081}{\texttt{ http\+://127.\+0.\+0.\+1\+:8081}} and you should see a visualization.
+
+Navigate to \href{http://127.0.0.1:8081/schedule.html}{\texttt{ http\+://127.\+0.\+0.\+1\+:8081/schedule.\+html}} and you should see a page to schedule the trips.
+
+Below are instructions that detail how to build and run in several different environments. ~\newline
+\hypertarget{md__home_louku008_csci-3081w_Team-001-47-homework04_README_Project_autotoc_md19}{}\doxysection{Getting Started using S\+S\+H onto C\+S\+E Lab machines}\label{md__home_louku008_csci-3081w_Team-001-47-homework04_README_Project_autotoc_md19}
+
+\begin{DoxyEnumerate}
+\item S\+SH into a C\+SE Lab Machine using {\bfseries{port forwarding}} for the UI
+
+{\bfseries{Note\+:}} If port {\ttfamily 8081} is not available, choose a different port (e.\+g. 8082, 8083, etc...)
+
+\`{}\`{}\`{}bash ssh -\/L 8081\+:127.\+0.\+0.\+1\+:8081 \href{mailto:x500@csel-xxxx.cselabs.umn.edu}{\texttt{ x500@csel-\/xxxx.\+cselabs.\+umn.\+edu}} \`{}\`{}\`{}
+
+Example\+: \`{}\`{}\`{}bash ssh -\/L 8081\+:127.\+0.\+0.\+1\+:8081 \href{mailto:kaung006@csel-kh1250-05.cselabs.umn.edu}{\texttt{ kaung006@csel-\/kh1250-\/05.\+cselabs.\+umn.\+edu}} \`{}\`{}\`{}
+\item Compile the project (within ssh session)
+
+\`{}\`{}\`{}bash cd /path/to/repo/project make -\/j \`{}\`{}\`{}
+\begin{DoxyEnumerate}
+\item Run project (within ssh session)
+
+\`{}\`{}\`{}bash ./build/bin/transit\+\_\+service 8081 apps/transit\+\_\+service/web/ \`{}\`{}\`{}
+\end{DoxyEnumerate}
+\item Navigate to \href{http://127.0.0.1:8081}{\texttt{ http\+://127.\+0.\+0.\+1\+:8081}} and you should see a visualization.
+\item Navigate to \href{http://127.0.0.1:8081/schedule.html}{\texttt{ http\+://127.\+0.\+0.\+1\+:8081/schedule.\+html}} and you should see a page to schedule the trips.
+\end{DoxyEnumerate}\hypertarget{md__home_louku008_csci-3081w_Team-001-47-homework04_README_Project_autotoc_md20}{}\doxysection{Simulation}\label{md__home_louku008_csci-3081w_Team-001-47-homework04_README_Project_autotoc_md20}
+\hypertarget{md__home_louku008_csci-3081w_Team-001-47-homework04_README_Project_autotoc_md21}{}\doxysubsection{Schedule}\label{md__home_louku008_csci-3081w_Team-001-47-homework04_README_Project_autotoc_md21}
+You will be able to schedule the robots for a ride in this page \href{http://127.0.0.1:8081/schedule.html}{\texttt{ http\+://127.\+0.\+0.\+1\+:8081/schedule.\+html}}.
+
+Type passenger name, select start and end destination, and press {\ttfamily Schedule Trip} button to schedule a trip.
+
+Now go to 3D Visualization page and select the view of the entities on top right corner.\hypertarget{md__home_louku008_csci-3081w_Team-001-47-homework04_README_Project_autotoc_md22}{}\doxysubsection{3\+D Visualization}\label{md__home_louku008_csci-3081w_Team-001-47-homework04_README_Project_autotoc_md22}
+You will be able to watch the simulation of the drone and the passenger here \href{http://127.0.0.1:8081}{\texttt{ http\+://127.\+0.\+0.\+1\+:8081}}.
+
+On top right corner, you can change your camera view into locking the entities. 

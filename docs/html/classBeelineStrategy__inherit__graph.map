@@ -1,0 +1,4 @@
+<map id="BeelineStrategy" name="BeelineStrategy">
+<area shape="rect" id="node1" title="this class inherits from the IStrategy class and is responsible for generating the Beeline route that..." alt="" coords="5,80,132,107"/>
+<area shape="rect" id="node2" href="$classIStrategy.html" title="Interface for strategies in strategy pattern in simulation." alt="" coords="28,5,109,32"/>
+</map>

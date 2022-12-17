@@ -1,0 +1,68 @@
+\hypertarget{classPersonFactory}{}\doxysection{Person\+Factory Class Reference}
+\label{classPersonFactory}\index{PersonFactory@{PersonFactory}}
+
+
+This class inherits from \mbox{\hyperlink{classIEntityFactory}{I\+Entity\+Factory}}. It is responsible for producing Persons in a composite factory.  
+
+
+
+
+{\ttfamily \#include $<$Person\+Factory.\+h$>$}
+
+
+
+Inheritance diagram for Person\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classPersonFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Person\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classPersonFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classPersonFactory_ab05214a2407160b838ee39af65754358}{Create\+Entity}} (Json\+Object \&entity)
+\begin{DoxyCompactList}\small\item\em Returns a \mbox{\hyperlink{classPerson}{Person}} pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class inherits from \mbox{\hyperlink{classIEntityFactory}{I\+Entity\+Factory}}. It is responsible for producing Persons in a composite factory. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPersonFactory_ab05214a2407160b838ee39af65754358}\label{classPersonFactory_ab05214a2407160b838ee39af65754358}} 
+\index{PersonFactory@{PersonFactory}!CreateEntity@{CreateEntity}}
+\index{CreateEntity@{CreateEntity}!PersonFactory@{PersonFactory}}
+\doxysubsubsection{\texorpdfstring{CreateEntity()}{CreateEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ Person\+Factory\+::\+Create\+Entity (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a \mbox{\hyperlink{classPerson}{Person}} pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & Object with characteristics for pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classPerson}{Person}} pointer with given characteristics 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntityFactory_a9bd53cf7ca21ab252968062ea5d88180}{I\+Entity\+Factory}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/louku008/csci-\/3081w/\+Team-\/001-\/47-\/homework04/libs/transit/include/Person\+Factory.\+h\item 
+/home/louku008/csci-\/3081w/\+Team-\/001-\/47-\/homework04/libs/transit/src/Person\+Factory.\+cc\end{DoxyCompactItemize}

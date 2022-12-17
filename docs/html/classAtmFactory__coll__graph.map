@@ -1,0 +1,4 @@
+<map id="AtmFactory" name="AtmFactory">
+<area shape="rect" id="node1" title=" " alt="" coords="13,80,110,107"/>
+<area shape="rect" id="node2" href="$classIEntityFactory.html" title="Abstract class for all factories in factory pattern in simulation." alt="" coords="5,5,117,32"/>
+</map>

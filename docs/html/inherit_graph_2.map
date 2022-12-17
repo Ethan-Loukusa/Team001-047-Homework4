@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classIEntityFactory.html" title="Abstract class for all factories in factory pattern in simulation." alt="" coords="5,132,117,159"/>
+<area shape="rect" id="node2" href="$classAtmFactory.html" title=" " alt="" coords="187,5,284,32"/>
+<area shape="rect" id="node3" href="$classCarFactory.html" title="This class inherits from IEntityFactory. It is responsible for producing cars in a composite factory." alt="" coords="189,56,281,83"/>
+<area shape="rect" id="node4" href="$classCompositeFactory.html" title="this class inherits from the IEntityFactory class and creates many different types of IEntities,..." alt="" coords="165,107,305,133"/>
+<area shape="rect" id="node5" href="$classDroneFactory.html" title="This class inherits from IEntityFactory. It is responsible for producing drones in a composite factor..." alt="" coords="181,157,290,184"/>
+<area shape="rect" id="node6" href="$classPersonFactory.html" title="This class inherits from IEntityFactory. It is responsible for producing Persons in a composite facto..." alt="" coords="178,208,293,235"/>
+<area shape="rect" id="node7" href="$classRobotFactory.html" title="This class inherits from IEntityFactory. It is responsible for producing Robots in a composite factor..." alt="" coords="181,259,289,285"/>
+</map>
